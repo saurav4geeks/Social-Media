@@ -7,13 +7,14 @@ import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import { themeSettings } from "theme";
+import { HashRouter } from "react-router-dom";
 function App() {
   const mode = useSelector((state) => state.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
   const isAuth = Boolean(useSelector((state) => state.token));
   return (
     <div className="app">
-      <BrowserRouter>
+      <HashRouter>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Routes>
@@ -28,7 +29,7 @@ function App() {
             />
           </Routes>
         </ThemeProvider>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
