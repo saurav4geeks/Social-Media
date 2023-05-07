@@ -8,7 +8,7 @@ const UserImage = ({ image, size = "60px" }) => {
         width={size}
         height={size}
         alt="user"
-        src={`https://mediafy.onrender.com/assets/${image}`}
+        src={`https://mediafy-backend-c3rj9.ondigitalocean.app/assets/${image}`}
       />
     </Box>
   );

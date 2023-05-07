@@ -23,7 +23,7 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
 
   const patchFriend = async () => {
     const response = await fetch(
-      `https://mediafy.onrender.com/users/${_id}/${friendId}`,
+      `https://mediafy-backend-c3rj9.ondigitalocean.app/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {

@@ -13,7 +13,7 @@ const FriendListWidget = ({ userId }) => {
 
   const getFriends = async () => {
     const response = await fetch(
-      `https://mediafy.onrender.com/users/${userId}/friends`,
+      `https://mediafy-backend-c3rj9.ondigitalocean.app/users/${userId}/friends`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
